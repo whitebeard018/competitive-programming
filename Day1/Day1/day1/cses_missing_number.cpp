@@ -9,7 +9,7 @@ int main() {
         cin>>a[i];
     }
     sort(a.begin(), a.end());
-    for(int i=1 ; i<=n ; i++){
+    for(int i=1 ; i<n ; i++){
         if(a[i-1]!=i){
             cout<<i;
             return 0;

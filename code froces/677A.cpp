@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+    long long n, h;
+    cin>>n>>h;
+    vector<long long> heights(n);
+    for(int i=0 ; i< n ; i++){
+        cin>>heights[i];;
+    }
+    int width=0;
+    for(int i=0 ; i<n ; i++){
+        if(heights[i]>h) width+=2;
+        else width+=1;
+    }
+    cout<<width;
+}

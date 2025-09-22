@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run C++ (single file, no-lock)",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "taskkill /F /IM \"${fileBasenameNoExtension}.exe\" >nul 2>&1 & if exist \"${fileBasenameNoExtension}.exe\" del /f /q \"${fileBasenameNoExtension}.exe\" & g++ -std=c++17 -O2 -Wall -Wextra -Wshadow \"${fileBasename}\" -o \"${fileBasenameNoExtension}.exe\" && \"${fileBasenameNoExtension}.exe\""
+      ],
+      "options": { "cwd": "${fileDirname}" },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}
+
+
+
+

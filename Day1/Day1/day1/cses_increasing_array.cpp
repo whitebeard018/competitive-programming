@@ -1,19 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include<vector>
 using namespace std;
 
 int main() {
-    int n;
+    long long int n;
     cin>>n ;
-    vector<int> a(n);
+    vector<long long int> a(n);
         
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (long long int i = 0; i < n; ++i) cin >> a[i];
     
-    int count=0;
-    for(int i=0 ; i < n-1 ; i++){
+   long long int count=0;
+    for(long long int i=0 ; i < n-1 ; i++){
     if(a[i]>a[i+1])
       {
-        ;
+        
     count += a[i] - a[i+1];
+    a[i+1] = a[i];
     } 
     else{
         count = count;

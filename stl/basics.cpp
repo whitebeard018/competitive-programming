@@ -10,7 +10,7 @@
 #include<queue>
 using namespace std;
 
-int main() {
+// int main() {
 // using namespace std;
 // int main(){
 // int n;
@@ -107,24 +107,88 @@ int main() {
     //     ms.erase(it);
     // }
     
-    int n;
-    cin>>n;
-    vector<int> st , sr;
-    for(int i=0 ; i<n ; i++){
-        int x;
-        cin>>x;
-        st.push_back(x);
-    }
-    int x = st.back();
-    for(int i=0 ; i<st.size()-1 ; i++){
-        if((st[st.size()-1-i] <x)){
-        sr.push_back(st[st.size()-1-i]);
-        } 
-        else {
-            sr.push_back(-1);
-            x=st[st.size()-1-i];
-        }
-    }
-    for(int c: sr) cout<<c<<" ";
+//     int n;
+//     cin>>n;
+//     vector<int> st , sr;
+//     for(int i=0 ; i<n ; i++){
+//         int x;
+//         cin>>x;
+//         st.push_back(x);
+//     }
+//     int x = st.back();
+//     for(int i=0 ; i<st.size()-1 ; i++){
+//         if((st[st.size()-1-i] <x)){
+//         sr.push_back(st[st.size()-1-i]);
+//         } 
+//         else {
+//             sr.push_back(-1);
+//             x=st[st.size()-1-i];
+//         }
+//     }
+//     for(int c: sr) cout<<c<<" ";
+//     return 0;
+// }
+// bool is_open(char c){
+//     return c=='(' || c=='{' || c=='[' || c=='<';
+// }
+// bool is_closed(char c){
+//     return c==')' || c=='}' || c==']' || c=='>';
+// }
+// char matching(char c){
+//     if(c=='(') return ')';
+//     if(c=='{') return '}';
+//     if(c=='[') return ']';
+//     if(c=='<') return '>';
+//     return 0;
+// }
+
+// int main(){
+//     string s;
+//     cin>>s;
+//     stack<char> st;
+//     for(char c: s){
+//         if(c == is_open(c)){
+//             st.push(c);
+//         }
+//         if(c== is_closed(c)){
+//             if(st.empty() || matching(st.top())!=c){
+//                 cout<<"NO"<<endl;
+//                 return 0;
+//             }
+//             st.pop();
+//         }
+//     }
+//     if(st.empty()) cout<<"YES"<<endl;
+//     else cout<<"NO"<<endl;
+// }
+// int main(){
+//     string s;
+//      cin>>s;
+//      queue<char> q;
+//      vector<char> freq(26,0);
+//      for(char c: s){
+//         freq[c-'a']++;
+//         q.push(c);
+
+//         if(!s.empty() && freq[q.front() - 'a']>1){
+//             q.pop();
+//         }
+//         if(q.empty()) cout<<-1<<" ";
+//         else cout<<q.front()<<" ";
+//      }
+// }
+int main(){
+    int n, k ;
+    cin>> n >> k ;
+    vector <int> a(n);
+    for(int i=0 ; i<n ; i++) cin>> a[i];
+    priority_queue<int> pq;
+    for(int x: a) pq.push(x);
+    
+    for(int i=0 ; i<k &&!pq.empty(); i++){
+    cout<<pq.top()<<" ";
+    pq.pop();
+    } 
+    cout<<"\n";
     return 0;
 }

@@ -177,18 +177,33 @@ using namespace std;
 //         else cout<<q.front()<<" ";
 //      }
 // }
-int main(){
-    int n, k ;
-    cin>> n >> k ;
-    vector <int> a(n);
-    for(int i=0 ; i<n ; i++) cin>> a[i];
-    priority_queue<int> pq;
-    for(int x: a) pq.push(x);
-    
-    for(int i=0 ; i<k &&!pq.empty(); i++){
-    cout<<pq.top()<<" ";
-    pq.pop();
-    } 
-    cout<<"\n";
-    return 0;
+//int main(){
+//    int n, k ;
+//    cin>> n >> k ;
+//    vector <int> a(n);
+//    for(int i=0 ; i<n ; i++) cin>> a[i];
+//    priority_queue<int> pq;
+//    for(int x: a) pq.push(x);
+//    
+//    for(int i=0 ; i<k &&!pq.empty(); i++){
+//    cout<<pq.top()<<" ";
+//    pq.pop();
+//    } 
+//    cout<<"\n";
+//    return 0;
+//}
+int main() {
+    long long t;
+    cin >> t;
+    while (t--) {
+        long long n;
+        cin >> n;
+		vector<long long> a(n);
+        for (long long i = 0; i < n; i++)
+            cin >> a[i];
+        int m;
+        cin >> m;
+        veector<string> b(m);
+
+    }
 }

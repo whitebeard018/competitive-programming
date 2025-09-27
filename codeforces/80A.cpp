@@ -11,7 +11,7 @@ int main(){
     int  n, m;
     cin>>n>>m;
       int nxt = n + 1;
-    while (nxt <= 50 && !is_prime(nxt)) ++nxt; // bounds small per problem
+    while (nxt <= 50 && !is_prime(nxt)) ++nxt; 
 
     if (nxt == m) cout << "YES\n";
     else cout << "NO\n";

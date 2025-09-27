@@ -193,7 +193,7 @@ using namespace std;
 //    return 0;
 //}
 int main() {
-    long long t;
+   /* long long t;
     cin >> t;
     while (t--) {
         long long n;
@@ -205,5 +205,9 @@ int main() {
         cin >> m;
         veector<string> b(m);
 
-    }
+    }*/
+    vector<int> st = { 1,2,3,4,6,7,8,9 };
+    st.push_back(st.begin() + 4)=5;
+    for (int c : st) cout << st;
+
 }
